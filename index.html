@@ -17,13 +17,16 @@
       --line-faint: #E5DDC9;
     }
 
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       background-color: var(--paper);
       color: var(--ink);
-      font-family: serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
+    /* 模拟宣纸质感的底纹 */
     .paper-bg {
       background-color: var(--paper);
       background-image:
@@ -31,75 +34,116 @@
         radial-gradient(ellipse at bottom right, rgba(142, 44, 38, 0.03) 0%, transparent 50%);
       min-height: 100vh;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
-    #loading {
-      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
-      background: #F2EDE2; font-family: sans-serif; color: #8C8275;
-      letter-spacing: 0.3em; font-size: 14px; z-index: 100;
-      transition: opacity 400ms; pointer-events: none;
-    }
-    #loading.hidden { opacity: 0; }
 
     .container {
-      max-width: 48rem;
+      max-width: 720px;
       margin: 0 auto;
       padding: 3rem 1.5rem;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     @media (min-width: 768px) {
-      .container { padding: 5rem 4rem; }
+      .container { padding: 5rem 2rem; }
     }
 
-    .qfont-display { font-weight: 900; letter-spacing: 0.02em; }
-    .qfont-italic { font-style: italic; }
-    .qfont-small { font-family: sans-serif; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; font-size: 12px; color: var(--ink-faint); }
+    /* 字体排版 */
+    .serif-title {
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+    .serif-body {
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    .serif-italic {
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .sans-small {
+      font-family: sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--ink-faint);
+    }
 
     .seal-color { color: var(--seal); }
     .ink-soft { color: var(--ink-soft); }
     .ink-faint { color: var(--ink-faint); }
 
-    .line-divider { background-color: var(--line); height: 1px; width: 6rem; margin: 2rem 0; }
-    .line-divider-faint { background-color: var(--line-faint); height: 1px; width: 100%; }
+    .line-divider {
+      background-color: var(--line);
+      height: 1px;
+      width: 5rem;
+      margin: 2rem 0;
+    }
 
+    .line-divider-faint {
+      background-color: var(--line-faint);
+      height: 1px;
+      width: 100%;
+    }
+
+    /* 封面与结语按钮 */
     .start-button {
-      font-family: serif;
+      font-family: "Noto Serif SC", serif;
       letter-spacing: 0.4em;
-      padding: 14px 56px;
+      padding: 14px 48px;
       border: 1px solid var(--ink);
       color: var(--ink);
       background: transparent;
       cursor: pointer;
       transition: all 300ms;
+      font-size: 15px;
     }
     .start-button:hover {
       background: var(--ink);
       color: var(--paper);
     }
 
+    /* 选项卡片 */
     .option-card {
       border: 1px solid var(--line);
       border-radius: 4px;
       padding: 1.25rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
       cursor: pointer;
       transition: background-color 200ms, border-color 200ms;
       background-color: transparent;
     }
-    .option-card:hover, .option-card.expanded {
+    .option-card:hover {
+      background-color: var(--paper-light);
+      border-color: var(--ink-faint);
+    }
+    .option-card.expanded {
       background-color: var(--paper-light);
       border-color: var(--ink-soft);
     }
 
     .option-letter {
+      font-family: serif;
       font-style: italic;
       font-weight: 500;
       font-size: 1.25rem;
       margin-right: 1rem;
+      min-width: 1.5rem;
+      display: inline-block;
     }
     .option-letter.expanded { color: var(--seal); }
     .option-letter.collapsed { color: var(--ink-faint); }
 
+    /* 展开的诊断说明 */
     .option-diag {
       margin-top: 1.25rem;
       padding-top: 1.25rem;
@@ -108,32 +152,36 @@
       gap: 1rem;
     }
     .vertical-line {
-      width: 1px;
+      width: 2px;
       background: var(--seal);
       opacity: 0.4;
       flex-shrink: 0;
     }
 
+    /* 底部导航栏 */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
       border-top: 1px solid var(--line-faint);
     }
     .nav-btn {
       background: none;
       border: none;
-      font-family: serif;
-      font-size: 1rem;
+      font-family: "Noto Serif SC", serif;
+      font-size: 0.95rem;
       letter-spacing: 0.1em;
       cursor: pointer;
       color: var(--ink);
+      padding: 0.5rem 0;
+      transition: color 200ms;
     }
     .nav-btn:hover { color: var(--seal); }
     .nav-btn:disabled { color: var(--ink-faint); cursor: not-allowed; }
 
+    /* 印章 */
     .seal-stamp {
       display: inline-block;
       border: 1.5px solid var(--seal);
@@ -143,23 +191,28 @@
       font-size: 14px;
       letter-spacing: 0.15em;
       transform: rotate(-2deg);
+      font-family: "Noto Serif SC", serif;
     }
 
-    .progress-track { height: 1px; background: var(--line-faint); width: 100%; margin-bottom: 3rem; }
-    .progress-fill { height: 1px; background: var(--seal); transition: width 600ms ease-out; }
+    /* 进度条 */
+    .progress-track { height: 1px; background: var(--line-faint); width: 100%; margin-bottom: 2.5rem; }
+    .progress-fill { height: 1px; background: var(--seal); transition: width 500ms ease-out; }
 
+    /* 页面淡入动画 */
     @keyframes pageIn {
-      from { opacity: 0; transform: translateY(8px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .page-in { animation: pageIn 600ms ease-out both; }
+    .page-in { animation: pageIn 500ms ease-out both; }
   </style>
 </head>
 <body>
-  <div id="loading">正在加载</div>
-  <div class="paper-bg" id="app"></div>
+  <div class="paper-bg" id="app">
+    <!-- 动态渲染区域 -->
+  </div>
 
   <script>
+    // 问卷完整核心数据
     const COVER = {
       title: "关于「为村庄修志」的十六个问题",
       intro: [
@@ -172,11 +225,6 @@
     };
 
     const CLOSING = {
-      title: "结",
-      paragraphs: [
-        "这套问卷的目的不是驳倒任何想为家乡留下文字的人。",
-        "让人知道自己在做什么，是这套问卷唯一的目标。",
-      ],
       restart: "重新开始",
     };
 
@@ -185,7 +233,7 @@
         num: "一",
         title: "你认为为什么需要为当代村庄编修村志？",
         options: [
-          { key: "A", text: "抢救即将消失的村庄文化记忆，给后人留下念想", diag: "这是最普遍也最值得反思的选项。法国历史学家 Pierre Nora 提出过一个判断：一个社会真正「活着」的传统是不需要被「抢救」的，它在日常生活中自然延续。一旦人们开始用「抢救」「留住」「趁还来得及」这种语言谈论某种文化，就说明那种文化的生活基础已经断裂——剩下的不是传统本身，而是关于传统的纪念物。所以「抢救式修志」不是在延续村庄的生命，而是在制造一个关于「曾经存在过一个村庄」的纪念碑。" },
+          { key: "A", text: "抢救即将消失的村庄文化记忆，给后人留下念想", diag: "这是最普遍也最值得反思的选项。法国历史学家 Pierre Nora 提出过一个判断：一个社会真正「活着」的传统是不需要被「抢救」的，它在日常生活中自然延续。一旦人们开始用「抢救」「留住」「趁还来得及」这种语言谈论某种文化，就说明那种文化的生活基础已经断裂——剩下的不是传统本身，而是关于传统的纪念物（他称之为「记忆之场」）。所以「抢救式修志」不是在延续村庄的生命，而是在制造一个关于「曾经存在过一个村庄」的纪念碑。" },
           { key: "B", text: "延续中华方志传统，传承数千年的修志文脉", diag: "「延续传统」听起来天经地义，但这里有一个事实问题：古代根本没有稳固的「村志」传统。当代「村村修志」是 1980 年代后才大规模出现的现象，2015 年才被正式纳入国家规划。也就是说，「村志传统」很大程度上是被追溯性建构出来的。" },
           { key: "C", text: "全面记录村庄的自然、经济、社会、人物，为研究者保存资料", diag: "「全面客观记录」听起来中性，但没有任何记录形式是中性的。一本志书的纲目已经决定了什么值得写、什么算「全面」。选择体例就是选择立场。" },
           { key: "D", text: "增强村民的文化认同感和归属感", diag: "「增强认同感和归属感」听起来温情，但要追问：谁的认同？哪一种「我们」？当代村志谁来主持？他们写出来的「我们村」自然会反映他们的位置，往往结构性地不在「我们」之内。" },
@@ -224,7 +272,7 @@
           { key: "A", text: "两者无关，村志记录文化和情感，行政系统记录数据", diag: "完全没有思考过「国家如何看见地方」这个核心问题。" },
           { key: "B", text: "村志可以补充行政系统的不足", diag: "「补丁」思路。行政系统的不足不是缺故事和人情，而是缺乏对结构性问题的把握。" },
           { key: "C", text: "在县级以上，行政系统已经替代了方志的「资治」功能；但在村一级，行政系统的覆盖反而薄弱", diag: "当代县级治理已被现代行政技术接管，但村一级的信息系统反而稀薄。" },
-          { key: "D", text: "正因为村一级行政信息薄弱，旧式村志才有功能空间——但功能空间不等于正当性", "diag": "关键的方法论突破。现成不等于合理。" },
+          { key: "D", text: "正因为村一级行政信息薄弱，旧式村志才有功能空间——但功能空间不等于正当性", diag: "关键的方法论突破。现成不等于合理。" },
           { key: "E", text: "应该用现代社会科学的方法（统计、田野、档案批判）来填补村级信息空白，而不是回到旧志体例", diag: "系统化的村级统计 + 人类学田野 + 档案建设 + 口述史项目。" }
         ]
       },
@@ -365,38 +413,47 @@
       }
     ];
 
+    // 应用状态
     let state = {
-      page: 0, // 0: cover, 1-16: questions, 17: closing
-      expanded: {} // { qIdx: { optKey: true } }
+      page: 0, // 0: 封面, 1~16: 题目页, 17: 结语
+      expanded: {} // 记录每道题展开了哪些选项 { qIndex: { optKey: true } }
     };
 
+    // 渲染主函数
     function render() {
       const app = document.getElementById('app');
-      
+
+      // 1. 封面页
       if (state.page === 0) {
         app.innerHTML = `
-          <div class="page-in container" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="page-in container" style="justify-content: space-between;">
             <div style="display: flex; justify-content: space-between;">
-              <div class="qfont-small">A SELF-DIAGNOSIS</div>
-              <div class="qfont-small">16 QUESTIONS</div>
+              <span class="sans-small">A SELF-DIAGNOSIS</span>
+              <span class="sans-small">16 QUESTIONS</span>
             </div>
-            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 48rem; margin: 0 auto; width: 100%;">
-              <h1 class="qfont-display" style="font-size: 2.25rem; line-height: 1.25; margin-bottom: 1.5rem;">
+            
+            <div style="max-width: 48rem; margin: 0 auto; width: 100%; text-align: left; padding: 2rem 0;">
+              <h1 class="serif-title" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.25; margin-bottom: 1.5rem;">
                 关于<span class="seal-color">「为村庄修志」</span>的<br>十六个问题
               </h1>
-              <div class="qfont-italic ink-soft" style="font-size: 1.25rem; margin-bottom: 2.5rem;">一份自我诊断</div>
+              <div class="serif-italic ink-soft" style="font-size: 1.25rem; margin-bottom: 2rem;">
+                ${COVER.title}
+              </div>
               <div class="line-divider"></div>
-              <div style="font-size: 1rem; line-height: 1.75; color: var(--ink-soft);" class="space-y">
+              <div class="serif-body ink-soft" style="font-size: 1rem; line-height: 1.8;">
                 ${COVER.intro.map(p => `<p style="margin-bottom: 1.25rem;">${p}</p>`).join('')}
               </div>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 3rem;">
-              <button onclick="startApp()" class="start-button">${COVER.start}</button>
-              <div class="qfont-small">TSURUYAMA &middot; MMXXVI</div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem;">
+              <button onclick="goToPage(1)" class="start-button">${COVER.start}</button>
+              <span class="sans-small">TSURUYAMA &middot; MMXXVI</span>
             </div>
           </div>
         `;
-      } else if (state.page >= 1 && state.page <= Q.length) {
+      } 
+      // 2. 题目页 (1 ~ 16)
+      else if (state.page >= 1 && state.page <= Q.length) {
         const idx = state.page - 1;
         const q = Q[idx];
         const progress = (state.page / Q.length) * 100;
@@ -404,18 +461,21 @@
         const expandedCount = Object.keys(expandedSet).length;
 
         app.innerHTML = `
-          <div class="page-in container" style="display: flex; flex-direction: column; min-height: 100vh;">
+          <div class="page-in container">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <div class="qfont-small">QUESTION ${state.page} / ${Q.length}</div>
-              <div class="qfont-italic ink-faint" style="font-size: 0.875rem;">${q.num}</div>
+              <span class="sans-small">QUESTION ${state.page} / ${Q.length}</span>
+              <span class="serif-italic ink-faint" style="font-size: 0.875rem;">${q.num}</span>
             </div>
-            <div class="progress-track"><div class="progress-fill" style="width: ${progress}%;"></div></div>
+            
+            <div class="progress-track">
+              <div class="progress-fill" style="width: ${progress}%;"></div>
+            </div>
             
             <div style="max-width: 48rem; margin: 0 auto; width: 100%; flex: 1;">
-              <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.5rem;">
-                <span class="qfont-display seal-color" style="font-size: 3.5rem; line-height: 1;">${q.num}</span>
-                <div class="vertical-line" style="align-self: stretch;"></div>
-                <h2 class="qfont-display" style="font-size: 1.25rem; line-height: 1.4; flex: 1;">${q.title}</h2>
+              <div style="display: flex; align-items: baseline; gap: 1.25rem; margin-bottom: 2.5rem;">
+                <span class="serif-title seal-color" style="font-size: 3.5rem; line-height: 1;">${q.num}</span>
+                <div class="vertical-line" style="align-self: stretch; width: 1px;"></div>
+                <h2 class="serif-title" style="font-size: 1.25rem; line-height: 1.4; flex: 1; margin: 0;">${q.title}</h2>
               </div>
 
               <div style="display: flex; flex-direction: column; gap: 0.75rem;">
@@ -424,13 +484,13 @@
                   return `
                     <div onclick="toggleOption(${idx}, '${opt.key}')" class="option-card ${isExpanded ? 'expanded' : ''}">
                       <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span class="option-letter ${isExpanded ? 'expanded' : 'collapsed'}" style="min-width: 1.5rem;">${opt.key}.</span>
-                        <span style="font-size: 1rem; line-height: 1.6; flex: 1;">${opt.text}</span>
+                        <span class="option-letter ${isExpanded ? 'expanded' : 'collapsed'}">${opt.key}.</span>
+                        <span class="serif-body" style="font-size: 1rem; line-height: 1.6; flex: 1;">${opt.text}</span>
                       </div>
                       ${isExpanded ? `
                         <div class="option-diag">
                           <div class="vertical-line"></div>
-                          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--ink-soft); flex: 1; margin: 0;">${opt.diag}</p>
+                          <p class="serif-body ink-soft" style="font-size: 0.95rem; line-height: 1.8; flex: 1; margin: 0;">${opt.diag}</p>
                         </div>
                       ` : ''}
                     </div>
@@ -440,55 +500,69 @@
             </div>
 
             <div class="nav-buttons" style="max-width: 48rem; margin: 0 auto; width: 100%;">
-              <button onclick="prevPage()" ${idx === 0 ? 'disabled' : ''} class="nav-btn">&larr; 上一题</button>
-              <div class="qfont-italic ink-faint" style="font-size: 0.75rem;">${expandedCount > 0 ? `已读 ${expandedCount} 个诊断` : "点击选项展开诊断"}</div>
-              <button onclick="nextPage()" class="nav-btn">${idx === Q.length - 1 ? "结" : "下一题"} &rarr;</button>
+              <button onclick="changePage(-1)" ${idx === 0 ? 'disabled' : ''} class="nav-btn">&larr; 上一题</button>
+              <span class="serif-italic ink-faint" style="font-size: 0.75rem;">${expandedCount > 0 ? `已读 ${expandedCount} 个诊断` : "点击选项展开诊断"}</span>
+              <button onclick="changePage(1)" class="nav-btn">${idx === Q.length - 1 ? "结" : "下一题"} &rarr;</button>
             </div>
           </div>
         `;
-      } else {
+      } 
+      // 3. 结语页
+      else {
         app.innerHTML = `
-          <div class="page-in container" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="page-in container" style="justify-content: space-between;">
             <div style="display: flex; justify-content: space-between;">
-              <div class="qfont-small">END</div>
-              <div class="qfont-small">${Q.length} / ${Q.length}</div>
+              <span class="sans-small">END</span>
+              <span class="sans-small">${Q.length} / ${Q.length}</span>
             </div>
-            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 48rem; margin: 0 auto; width: 100%;">
-              <div style="margin-bottom: 2.5rem;"><span class="seal-stamp">尾</span></div>
+            
+            <div style="max-width: 48rem; margin: 0 auto; width: 100%; text-align: left; padding: 2rem 0;">
+              <div style="margin-bottom: 2rem;"><span class="seal-stamp">尾</span></div>
               <div class="line-divider"></div>
-              <div class="qfont-display" style="font-size: 1.5rem; line-height: 2; max-space: 2rem;">
+              <div class="serif-title" style="font-size: 1.5rem; line-height: 2;">
                 <p style="margin-bottom: 1.5rem;">这套问卷的目的不是<span class="seal-color">驳倒</span>任何想为家乡留下文字的人。</p>
                 <p>让人知道自己<span class="seal-color">在做什么</span>，是这套问卷唯一的目标。</p>
               </div>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 3rem;">
-              <button onclick="restartApp()" class="start-button">${CLOSING.restart}</button>
-              <div class="qfont-small">TSURUYAMA &middot; MMXXVI</div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem;">
+              <button onclick="goToPage(0)" class="start-button">${CLOSING.restart}</button>
+              <span class="sans-small">TSURUYAMA &middot; MMXXVI</span>
             </div>
           </div>
         `;
       }
 
-      // 移除加载遮罩
-      const loading = document.getElementById('loading');
-      if (loading) {
-        loading.classList.add('hidden');
-        setTimeout(() => loading.remove(), 400);
+      // 页面滚动回顶部
+      window.scrollTo(0, 0);
+    }
+
+    // 交互动作逻辑
+    function goToPage(pageNum) {
+      state.page = pageNum;
+      render();
+    }
+
+    function changePage(direction) {
+      const target = state.page + direction;
+      if (target >= 0 && target <= Q.length + 1) {
+        state.page = target;
+        render();
       }
     }
 
-    function startApp() { state.page = 1; render(); window.scrollTo(0, 0); }
-    function restartApp() { state.page = 0; state.expanded = {}; render(); window.scrollTo(0, 0); }
-    function prevPage() { if (state.page > 1) { state.page--; render(); window.scrollTo(0, 0); } }
-    function nextPage() { if (state.page <= Q.length) { state.page++; render(); window.scrollTo(0, 0); } }
     function toggleOption(qIdx, optKey) {
-      if (!state.expanded[qIdx]) state.expanded[qIdx] = {};
+      if (!state.expanded[qIdx]) {
+        state.expanded[qIdx] = {};
+      }
       state.expanded[qIdx][optKey] = !state.expanded[qIdx][optKey];
       render();
     }
 
-    // 初始化渲染
-    window.onload = render;
+    // 初始首屏渲染
+    window.onload = function() {
+      render();
+    };
   </script>
 </body>
 </html>
