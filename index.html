@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>关于「为村庄修志」的十六个问题</title>
-  <!-- 使用 Tailwind 官方 CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- 使用 jsDelivr 稳定 CDN 加载 React 18 生产环境 -->
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
-  <!-- 使用 jsDelivr 稳定 CDN 加载 Babel -->
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+  <!-- 使用字节跳动稳定国内 CDN 加载 Tailwind -->
+  <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/3.0.23/tailwind.min.js"></script>
+  <!-- 使用字节跳动稳定国内 CDN 加载 React 18 生产环境 -->
+  <script crossorigin src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/react/18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <!-- 使用字节跳动稳定国内 CDN 加载 Babel -->
+  <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/babel-standalone/6.26.0/babel.min.js"></script>
   <style>
     body { margin: 0; background-color: #F2EDE2; }
     #loading {
@@ -504,7 +504,7 @@ const Q = [
       },
       {
         key: "E",
-        text: "“村庄消失”这种叙述本身就是一个值得研究的话语——它什么时候被这样讲述？谁在讲？",
+        text: "“村庄消失”这种叙述本身就是一个值得研究的话语——它什么时候被谁在讲？",
         diag: "元层级反应。当一个社会开始大规模谈论“失去”时，这种谈论本身比那个“失去”更值得研究。",
       },
     ],
@@ -682,485 +682,11 @@ const styles = `
   .option-letter {
     font-family: serif;
     font-weight: 500;
-    font-styl研究把「村」作为问题来解构",
-        diag: "到达了 Duara 层面——对「连续性叙事」的批判。修志的写作动作要求一个稳定的对象（「这就是我们村」），叙述才能展开；研究的写作动作要求把这个对象悬置（「为什么这个边界？为什么这个共同体？为什么这个连续性？」）。两者在认识论上不可调和——你要么写一个「村」，要么研究「村」是怎么被讲出来的。",
-      },
-      {
-        key: "E",
-        text: "严肃的乡村研究（如华南学派）已经把方志和族谱当作史料来批判性使用，而不是当作模板来效仿",
-        diag: "到达了完整的方法论自觉。「史料」和「模板」的区分是关键：把方志当史料，意味着把它放进史源学的检验里——它什么时候被写、被谁写、写作动机是什么、可能扭曲了什么、隐藏了什么。把方志当模板，意味着复制它的纲目和叙述逻辑，连同其内嵌的预设一起继承下来。当代严肃的乡村研究——科大卫《皇帝和祖宗》、刘志伟《在国家与社会之间》、萧凤霞的珠江三角洲研究、王明珂的羌族研究——都把方志和族谱作为研究对象（史料），而不是作为效仿对象（模板）。当代再去模仿方志体例修村志，等于无视了几十年的学术积累。",
-      },
-    ],
-  },
-  {
-    num: "六",
-    title: "面对村庄消亡，最该做的是什么？",
-    options: [
-      {
-        key: "A",
-        text: "抓紧编修村志，趁老人还在，留下记忆",
-        diag: "典型的怀旧—连续性—共同体三联反应，最容易掉回士绅—宗族范式。「趁老人还在」这种紧迫感会让人放弃方法论思考，以为只要快点写就好。但仓促的写作，会自动滑向最熟悉、最现成的形式（旧志体例）和最安抚人的内容（祖辈光荣、村庄和谐、传统美德），把真实的复杂性彻底过滤掉。结果是：村庄真实的消亡过程没有被理解，而被生产的是一本关于「曾经存在过一个美好村庄」的纪念品。",
-      },
-      {
-        key: "B",
-        text: "拍纪录片、办村史馆、做口述史项目",
-        diag: "方法上更现代，但仍然是参与式的，没有研究距离。这些工作有价值——纪录片能保留文字志书做不到的空间、动作、声响；口述史能保留个人讲述的犹豫、修正、矛盾。但如果仅仅停留在「记录」层面，这些工作会和志书一样变成「为消失的村做一个像样的告别」。它们的真正价值要在它们被作为研究材料、被批判性地阅读时才能浮现。",
-      },
-      {
-        key: "C",
-        text: "做严肃的村庄研究——研究村庄如何消亡、谁先离开、土地如何处置、记忆如何在迁居社区重组",
-        diag: "到达了 Anna Tsing《末日松茸》和废墟人类学层面，方法论独立。这一立场认识到：消亡是一个过程，不是一个状态。值得研究的不是「消亡之前的样子」（那已经回不去了），而是「正在如何消亡」——谁先走、补偿怎么谈、家具怎么处置、祠堂搬到哪里、迁居社区里村民如何重组关系、孩子在新环境里怎么记得老村。这种研究产出的知识，对未来理解我们这个时代的价值，远远超过任何精装志书。",
-      },
-      {
-        key: "D",
-        text: "研究「村志热」和「乡愁话语」本身——把这种抢救冲动作为研究对象",
-        diag: "到达了 Pierre Nora 层面——意识到「抢救」本身是现象。一个社会在什么历史时刻开始大规模生产「我们正在失去」的话语？谁在生产？这种话语在政治上起什么作用（地方政府为什么也愿意推动）？它和文旅产业、非遗政策、城市中产怀旧消费有什么关系？这些是知识社会学层面的问题——它们让「村志运动」从一个「应不应该参与」的伦理问题，变成一个「这是什么社会现象」的研究问题。",
-      },
-      {
-        key: "E",
-        text: "C 和 D 同时做，并保持自觉：参与抢救的人不是研究者，研究「抢救现象」的人才是",
-        diag: "到达了完整的方法论位置——「为消失的村庄写志」这一行动本身需要被研究，而不是被执行。这个位置不是冷漠的旁观，它承认参与式写作（B）有自己的合法位置，但要求研究者对自己的位置保持区分：你要么在做参与式抢救（接受它的所有方法论代价），要么在做研究（接受研究距离带来的不便）。两者都做时，要清楚每个动作属于哪一个位置——而不是把两件事混成一团。",
-      },
-    ],
-  },
-  {
-    num: "七",
-    title: "当你想象「研究一个村庄」时，你脑中第一个想问的问题是什么？",
-    options: [
-      {
-        key: "A",
-        text: "这个村从古到今都发生了什么？",
-        diag: "这是编年体／志书式的提问。它的隐含假设是：村庄是一个稳定容器，里面发生了一系列事情，研究就是把这些事情按时间排列出来。这种提问根本不需要现代学科训练——明清士人就这么干。它产出的是 chronicle（年代记），不是 history（史学）。",
-      },
-      {
-        key: "B",
-        text: "这个村现在是什么样子？和 30 年前／50 年前／100 年前比有什么变化？",
-        diag: "这是描述式／早期民俗志的提问。它比 A 进了一步，意识到「现状」和「过去」不同，但停留在「对比记录」层面。这是 19 世纪到 20 世纪初民俗学和早期人类学的工作模式（比如顾颉刚那一代的歌谣运动、燕京学派早期的村庄调查），但现代学科早已不把这种描述当成研究的终点——它只是材料。",
-      },
-      {
-        key: "C",
-        text: "为什么这个村会出现 X 现象？／这个村是怎么经历 Y（土改、集体化、打工潮等）的？",
-        diag: "这是现代历史学的提问方式。关键词是「为什么」和「怎么」——它要求因果分析、机制说明、与更大历史进程的连接。比如黄宗智研究华北小农经济，张乐天研究人民公社制度，阎云翔研究私人生活变革，问的都是这种问题。这种提问产出的是历史学专著，不可能写成志书——因为志书没有论证位置，只有记录位置。",
-      },
-      {
-        key: "D",
-        text: "这个村的某个具体现象，能告诉我们关于（国家、市场、性别、宗教等）什么更普遍的问题？",
-        diag: "这是社会科学／人类学的提问方式。它把村庄看作一个透镜，通过它去看更大的理论问题。比如阎云翔《私人生活的变革》通过黑龙江下岬村看中国现代性中的个体化；项飙《跨越边界的社区》通过北京「浙江村」看流动人口与国家的关系。这种提问产出的是民族志或社会学专著，村庄本身不是目的，而是入口——这和志书的逻辑（村庄就是目的）根本相反。",
-      },
-      {
-        key: "E",
-        text: "「这个村」的边界、定义、故事是怎么被建构出来的？谁有权力定义它？",
-        diag: "这是批判性／反思性研究的提问方式。它把「村庄」本身当作问题：这个边界是怎么划出来的？这个共同体是怎么被讲述出来的？这种提问背后是 Foucault、Bourdieu、Duara 这一脉的训练，问的是「知识—权力」层面的问题。它产出的可能是历史人类学专著，也可能是知识社会学论文。当代村志运动本身就是这种研究的对象。",
-      },
-    ],
-  },
-  {
-    num: "八",
-    title: "村里的祠堂是一个重要对象。下面哪种处理方式才算「研究」？",
-    options: [
-      {
-        key: "A",
-        text: "拍照、记录建筑形制、抄录碑文、列出供奉先人——保护文化遗产",
-        diag: "这是文物保护／文化遗产的工作模式。它把祠堂当作一件「物」，目标是让物保存下来。这件事有价值，但它不解释任何东西，也不回答任何问题——它本质上是博物馆工作，不是研究。",
-      },
-      {
-        key: "B",
-        text: "梳理祠堂历史、列出历代重要祭祀活动、记录入祠族人——志谱式记述",
-        diag: "这是志书式记述。它比 A 多了时间维度，但仍然把祠堂当作一个自足对象，没有把它放进更大的历史—社会脉络去问「为什么」。",
-      },
-      {
-        key: "C",
-        text: "考证祠堂何时建、由谁出资、在什么政治背景下建立、反映了当时国家与地方的什么关系",
-        diag: "这是历史学的处理方式，典型代表是科大卫《皇帝和祖宗》：他研究珠江三角洲的祠堂时，揭示出大量「看似古老」的祠堂其实是明代中后期才大规模出现的，背后是明朝国家礼仪改革（嘉靖大礼议）、户籍制度（里甲制）和地方士绅争夺资源共同作用的产物。换句话说，祠堂不是村庄自然演化的结果，而是国家—地方互动的具体产物。这种研究的意义在于：它把一个看似「传统」的对象重新历史化，揭示它真实的政治经济起源。",
-      },
-      {
-        key: "D",
-        text: "观察当下祠堂里的祭祀活动、访谈参与者、分析谁参与谁被排除、它在当代村庄生活中起什么社会作用",
-        diag: "这是人类学的处理方式，典型代表是萧凤霞、刘志伟的工作，以及更早的 Maurice Freedman、Stephan Feuchtwang 等人。他们关心的是祠堂作为当下的社会场域：今天还在祭祀吗？谁主持？谁出钱？女儿能不能进？外迁的能不能进？外姓能不能借场地？祭祀仪式是过去的延续还是被重新发明的？这些问题揭示的是当代权力关系，而不是「历史保存」。",
-      },
-      {
-        key: "E",
-        text: "以上都有用，但产出的是不同性质的知识——只有 C 和 D 才是现代学科意义上的「研究」",
-        diag: "到达了学科自觉的层面：理解不同的处理方式产出不同的知识，没有一种是「全面的」，每一种都有它的提问框架和盲区。把这道题用来对照问题三特别有效。一个人如果在问题三选 A 或 B（赞成志谱合一）、却在问题八选 C 或 D，他的立场就内部不一致——他在祠堂这个具体对象上承认了科大卫式的批判，却在整体框架上回到了被科大卫批判的范式。",
-      },
-    ],
-  },
-  {
-    num: "九",
-    title: "研究发现某村的宗族实际上是 16 世纪才「建构」起来的，但村民坚持说自己的祖先从唐代就在这里。研究者应该怎么处理？",
-    options: [
-      {
-        key: "A",
-        text: "尊重村民的说法——他们最了解自己的历史",
-        diag: "这是民俗采集的立场。它把村民当作「自己历史的天然权威」，研究者的角色是忠实记录员。这个立场有它的位置（比如某些口述史项目），但它不构成历史研究——因为它放弃了批判性。而且更要命的是：村民「自己的历史」很大程度上正是被族谱、祠堂、地方士绅塑造出来的——所谓「村民最了解」，实际上是「村中有话语权的人最了解」。把这种被建构的叙述当成本真权威，等于研究者帮某种地方权力做背书。这正是当代村志最常见的失败方式。",
-      },
-      {
-        key: "B",
-        text: "两个版本都记录下来，但以村民说法为主，以示尊重传统",
-        diag: "折中立场，但这种「两边都对」的处理在方法论上是站不住的。如果一种说法是经过文献和考古考证站不住脚的（比如 16 世纪文书清楚显示宗族那时才形成），它就不能和考证结果「并列」。让两者并列再「以村民为主」，等于让研究者放弃自己作为研究者的判断职责。这不是尊重，是失职。",
-      },
-      {
-        key: "C",
-        text: "把历史考证结果写出来作为事实，但表述上要委婉，避免冒犯村民",
-        diag: "这是老派实证史学的立场：考证出真相，礼貌地告诉大家。这比 A、B 进步，但它仍然停留在「发现真相—公布真相」的二元结构里，没有把「为什么会有这种神话」本身当作问题。",
-      },
-      {
-        key: "D",
-        text: "把「差异本身」作为研究对象——为什么这个村需要一个唐代起源神话？这个神话在维护什么？为什么它在某个时刻被需要、被讲述、被相信？",
-        diag: "这是现代历史学和人类学的核心位置。它的逻辑是：村民的「错误」叙述本身就是最珍贵的研究材料。一个村为什么需要一个唐代起源？是为了在明清户籍登记中获得「原住民」地位？是为了在与邻村争夺水源、田产、风水时占据道义高位？是为了让某一支系在宗族内部的权力斗争中胜出？是当代修家谱的人为了让本村申请非遗或文旅项目更有说服力？法国社会学家 Maurice Halbwachs 早就指出：「集体记忆」不是过去的客观留存，而是当下需要建构出来的关于过去的版本——记忆永远是为现在服务的。Pierre Nora 在此基础上进一步强调，记忆的这种「被建构性」恰恰是研究者的入口而不是障碍。所以选 D 的研究者会把这个差异当成金矿，而不是当成需要「调和」的麻烦。这道题最能暴露的就是：修志的立场必然倒向 A 或 B（因为修志的目的是和地方共同体合作生产官方记录），而研究的立场必然倒向 D。如果一个人嘴上说自己在做「研究」，操作起来却倒向 A 或 B，他就还在修志，只是换了个名字。",
-      },
-    ],
-  },
-  {
-    num: "十",
-    title: "当你想为村庄编修一本志书时，你是以什么身份在做这件事？",
-    options: [
-      {
-        key: "A",
-        text: "我是这个村出身的人，这是我对家乡的责任",
-        diag: "这是一个非常真实的位置，不需要否认，但需要看见它带来的条件和代价：你能进入很多外人进不去的场合，能听到外人听不到的话；同时你也最难看清你从小习以为常的事情有什么问题，最难写出会让你的家人朋友不舒服的内容。人类学里有个专门的术语叫「insider research」（内部人研究），它的优势和盲区已经被几十年研究讨论过——核心结论是：内部人位置不是天然劣势也不是天然优势，但必须被自觉化。否则你写出来的会自动是「对内、对自己人交代得过去的版本」，不是对历史负责的版本。",
-      },
-      {
-        key: "B",
-        text: "我是村里的退休干部／文化名人／有号召力的人，村里需要我来牵头",
-        diag: "这是一个更敏感的位置。这不是说这个位置不能做事，而是要看清：你的位置本身就内嵌于你将要书写的对象之中。你和村中某些家族关系亲，和某些不亲；你在某些历史事件中是当事人或当事人的亲属；你的祖辈、父辈在土改、集体化、文革中各自做过什么事；这些事情让你下笔时会有具体的、可以预测的避讳方向。这不是道德指责，是结构事实。这种位置上的人写出来的志书，本质是某种地方政治平衡的产物——可能很有价值（保留了大量「圈内」信息），但绝不是中立记录。",
-      },
-      {
-        key: "C",
-        text: "我是受村委会或地方政府委托的执笔人",
-        diag: "受地方政府委托的写作位置最清晰也最有问题：你的写作必然要通过审稿—审批—验收链条，写什么和不写什么部分由这个链条决定，而不是由历史本身决定。土改中的非正常死亡、集体化中的饥荒、文革中的暴力、当代征地中的冲突——这些在委托写作里几乎一定会被淡化、抹去或转写成「曲折前进」的话语。这不是个人能力问题，是位置决定的。",
-      },
-      {
-        key: "D",
-        text: "我是研究者，村庄是我的研究对象",
-        diag: "纯研究者位置——比如外来的博士生、人类学者——也不是没有代价：你不容易获得真正的信任，你的访谈对象会对你有所保留，你能在村里待的时间有限，你的判断会受到自己理论立场的强烈塑造。但相对于 A、B、C，研究者位置的优势是没有内嵌于地方利益结构，可以问那些当地人不能或不愿问的问题。",
-      },
-      {
-        key: "E",
-        text: "我是参与者也是研究者——既写也反思自己在写",
-        diag: "这是最理想但也最难的位置：承认自己是双重身份，并把这种双重性变成研究的工具而不是障碍。人类学有一个专门的工作传统叫「自我民族志」（autoethnography），就是研究者把自己作为研究对象的一部分。比如阎云翔写下岬村，他自己就是当地人；他不假装外人，但他在书里专门反思自己作为内部人的位置如何塑造了他的看见和不看见。这是当代社会科学公认的成熟立场。",
-      },
-      {
-        key: "F",
-        text: "我没想过这个问题，我以为修志就是修志，和谁来修没关系",
-        diag: "这是最常见、也最值得展开的立场。「修志就是修志，和谁修无关」这种想法预设了一种实证主义的中性观：以为只要照着体例做，事实就会被客观地记录下来，作者位置不重要。但任何一本写出来的东西都带着作者的位置：你能接触到谁、谁信任你、谁愿意告诉你真话、谁会对你隐瞒、你下意识地把哪些事看作「重要」、哪些看作「无关」——这些都由你在村里的位置决定。社会学家 Pierre Bourdieu 把研究者忽略自己位置的这种倾向叫做「学究式偏见」（scholastic fallacy）：以为自己在「客观看」，其实是在从某个特定角度看，并把这个角度误认成「无角度」。作者位置不会因为你不思考它就消失，它只会变成隐形的偏见。",
-      },
-    ],
-  },
-  {
-    num: "十一",
-    title: "你修志的对象，最重要的「读者」是谁？",
-    options: [
-      {
-        key: "A",
-        text: "当下的村民——让他们了解自己村的历史",
-        diag: "读者是当下村民，意味着你在写一个对村民友好的版本。这会自动激活几个倾向：突出令村民自豪的内容（出过的人才、获得的荣誉、村庄的「特色」），淡化村内长期存在的矛盾（家族派系、土地纠纷、被打压过的人），美化集体记忆（把分歧叙述成团结，把暴力叙述成「那个特殊年代」）。这个版本可以做，但要清楚：它是一种公关文体，不是历史。",
-      },
-      {
-        key: "B",
-        text: "离开村庄的游子——为他们保留乡愁的载体",
-        diag: "为离开村庄的人写「乡愁载体」，意味着你在生产 Pierre Nora 意义上的记忆之场：一种为缺席者准备的、被精心维护其美好性的「故乡」。这种文本的功能不是历史认知，而是情感安抚——它让在外漂泊的人通过它确认「我有一个故乡」。这个功能完全合理，但它和历史研究在根本上是不同的活动。一个清醒的写作者应该明确告诉读者：「这本书是为漂泊者写的故乡画像，不是这个村的历史。」",
-      },
-      {
-        key: "C",
-        text: "后人和子孙——让几百年后的人知道我们曾经存在过",
-        diag: "「为几百年后的人留下记录」听起来高远，但要追问：你怎么知道几百年后的人会想要什么？几百年后的研究者最想要的，往往恰恰是当代写作者认为「不重要」或「不光彩」而省略掉的东西——账本、纠纷文书、口角记录、私人书信、被打压者的处境、底层细节。古代文人写志书时也是为后人留记录的姿态，结果他们最珍视的「艺文」门类对今天的研究者价值有限，他们觉得不值一提的钱粮、刑名、户籍残卷反而成了今天的金矿。为后人写最好的方式，是不替后人筛选什么重要——但志书体例的本质就是预先筛选。",
-      },
-      {
-        key: "D",
-        text: "学术界——为研究者提供资料",
-        diag: "这是诚实的研究位置：我写出来主要是给研究者用的资料汇编。如果是这个目的，那你应该追问：研究者真的需要「志书」形式吗？当代历史学和社会科学需要的是档案、口述史录音、田野笔记、数据集、统计资料、未经「提炼」的原始记录。把这些经过你的筛选和体例化重组写成志书，对研究者的价值反而下降了——他们更需要看到原始材料，自己做判断。所以选 D 的人要面对的悖论：如果真为研究者，最该做的可能不是「修志」，而是「建档案」。",
-      },
-      {
-        key: "E",
-        text: "地方政府／上级方志办——完成体制内的文化工程任务",
-        diag: "这是诚实的，但要看清：体制任务有它自己的格式要求和审查逻辑，这些会决定文本的样子。如果你只是要完成任务，那做就是了；但如果你内心里同时还想「留下真东西」，那这两个目的会在每一段文字里打架。",
-      },
-      {
-        key: "F",
-        text: "没想过——只想「把它写出来」",
-        diag: "「没想过」几乎一定意味着默认采纳了最常见的那种隐含读者——本村人 + 上级方志办的混合体。这个隐含读者会让你的写作自动滑向问题 A + E 的混合，而你自己不会察觉。",
-      },
-    ],
-  },
-  {
-    num: "十二",
-    title: "以下哪种工作最接近你想做的事？",
-    options: [
-      {
-        key: "A",
-        text: "写一本传统体例的村志——纲目分明，内容齐全",
-        diag: "明确的修志工作。这是诚实的选择，但下面要问的就是问题二里 F、G 那一套：你为什么觉得这个体例适合你想表达的内容？",
-      },
-      {
-        key: "B",
-        text: "编一本「村庄记忆集」——访谈老人，整理口述故事，配老照片",
-        diag: "这是当代很多自称「修志」的人实际上想做的事，但他们错把它叫成了修志。口述史和记忆汇编是一种独立的知识形态，它有自己的方法论（访谈伦理、转录规范、交叉验证、记忆理论），它不需要、也不应该套上志书纲目。把口述材料填进「风俗」「人物」「逸闻」这些古老门类里，恰恰毁掉了口述史的价值——口述史最珍贵的是它的语境、矛盾、犹豫、自我修正，这些一旦被志书的简洁体例改写，就消失了。所以选 B 的人最该做的事，是把项目从「修志」重新定义为「口述史项目」，然后按口述史的成熟方法论去做。",
-      },
-      {
-        key: "C",
-        text: "建一个村史档案室——收集契约、账本、奖状、票证、信件等原始材料并系统编号",
-        diag: "这可能是当代基层最稀缺、最有价值、却最不被看见的工作。一个村真正需要的不是又一本被精心修饰过的志书，而是一个未经过度筛选的原始材料档案：宅基地登记、土地承包合同、村民代表会记录、信访记录、计生档案、外出务工登记、老照片、私人信件、票证实物、口述录音原件。这些东西如果不有人系统收集，二十年后真的会消失；而它们的价值，是任何「志书」都无法替代的——因为志书是已经被一个人／一群人解读过的二手产物，而档案是让未来研究者自己去解读的一手材料。如果你真心想「为后人留下点东西」，做档案远比修志重要。",
-      },
-      {
-        key: "D",
-        text: "拍一部纪录片——记录消失中的村庄当下的状态",
-        diag: "视觉民族志／纪录片。这是另一种成熟的独立形态，方法论上接近人类学。它能记录的东西（空间、动作、表情、声响、节奏）是文字志书完全做不到的。当代很多优秀的村庄记录其实是纪录片：周浩、徐童、吴文光的村民影像计划。如果你想做的真的是这种工作，你不该写志书，该拿起摄像机或者支持纪录片项目。",
-      },
-      {
-        key: "E",
-        text: "写一本严肃的村庄历史／社会研究专著——有问题意识、有论证、有理论对话",
-        diag: "研究专著。这是研究者的位置，需要的是学院训练。",
-      },
-      {
-        key: "F",
-        text: "写一本关于「为什么 21 世纪还在抢救修志」的研究——把当代修志运动本身作为对象",
-        diag: "研究「修志现象」本身。这是元层级的位置，需要更专业的学院训练。这道题的关键功能是：让你看到 B、C、D 这些「非志书但更适合你真实意图」的选项的存在。很多自称要「修志」的人，在看到这些选项后会发现自己想做的其实是 B 或 C——这时候真正的对话就开始了：你不需要放弃你的工作，你需要重新认识你的工作究竟是什么形态。",
-      },
-    ],
-  },
-  {
-    num: "十二点五",
-    title: "如果你不是研究者，但你想为家乡留下文字，你最希望避免的是什么？",
-    options: [
-      {
-        key: "A",
-        text: "啥都不希望避免，把好的留下来就行",
-        diag: "「把好的留下来」听起来无害，但这正是问题所在——「好的」由谁定义？「好的」之外的部分（矛盾、痛苦、不光彩、模糊）就不值得留下吗？这种态度会自动生产出一个被预先美化的版本，把村庄真实历史的一半甚至更多直接过滤掉。",
-      },
-      {
-        key: "B",
-        text: "避免内容不全、不够「有面子」",
-        diag: "「有面子」是一个透露信息很多的词。它意味着：写作的标准不是真实，而是村庄（或自己）的「形象」。一个以「面子」为标准的文本，必然会写得堂皇、得体、过得去——但所有真正值得记住的东西，往往恰恰是不堂皇、不得体、过不去的那些。",
-      },
-      {
-        key: "C",
-        text: "避免冒犯村里的某些家族或某些人",
-        diag: "诚实承认了这个考量，但要看清它的代价：每一处「避免冒犯」，都是一处真实历史的省略。村庄真实历史中最重要的事件——土地争夺、家族斗争、政治运动中的相互举报、改革开放后的暴富与失势——几乎都涉及具体的人和家族。避开这些，剩下的就是一个被去骨的版本。",
-      },
-      {
-        key: "D",
-        text: "避免把村里的真实矛盾、冲突、暴力写出来——这些不光彩",
-        diag: "这是最常见也最值得反思的立场。要追问：「不光彩」的标准是什么？村里的女性长期受苦——这件事写出来不光彩吗？还是不写出来不光彩？土改中被错划成分的家庭——他们的苦难记录下来是对村庄的污点，还是不记录下来是对他们的二次伤害？「不光彩所以不写」这种立场，本质上是用当下村庄共同体的脸面，覆盖了那些已经无法发声的人。",
-      },
-      {
-        key: "E",
-        text: "避免把村庄写成一个不存在的、被美化过的版本，因为美化的家乡其实是另一个家乡",
-        diag: "这是参与者立场里最成熟的位置：我不是研究者，我也不假装客观，但我对「留下真实」有基本敬意。这个位置不需要专业训练，只需要诚实。一个清醒的参与者会承认：美化的家乡是一个不存在的家乡，记住它等于忘记真正的家乡。几十年后，村里的下一代或外迁的人想了解真实的祖辈生活，他们手上只有这本书——如果书里只有美好版本，他们将永远失去对真实祖辈的接触机会。这是参与式写作能给后人最重要的礼物：不替后人定夺「应该如何记忆」。",
-      },
-    ],
-  },
-  {
-    num: "十三",
-    title: "当你看到「中国每年消失数万个村庄」这类数据，你的第一反应是什么？",
-    options: [
-      {
-        key: "A",
-        text: "痛心，必须立刻抢救——再不做就来不及了",
-        diag: "这是当代最普遍的反应，也是村志运动的情感基础。它的问题不在于情感本身——情感是真的，痛心是真的——而在于：情感反应直接跳到行动反应，跳过了「理解发生了什么」这一步。在没有理解清楚的情况下投入「抢救」，往往抢救的不是真实的村庄，而是某种关于村庄的想象。结果是：物理村庄继续按原本的轨迹消失或转变，而被生产出来的是一堆精装的志书——它们安抚了写作者和读者的怀旧情感，但和真实的村庄变迁过程几乎无关。",
-      },
-      {
-        key: "B",
-        text: "这是必然趋势，应该顺其自然",
-        diag: "技术决定论的反应。它的问题是把人完全从历史里取消了——好像城市化是自然规律一样在运行。但每一个村庄消失的方式都是具体的政治经济决定：是因为耕地被征用？因为撤村并居指标？因为外出务工人口超过临界点？因为撤并学校？因为生态搬迁？这些是政策决定，不是自然过程。把它说成「必然趋势」等于免除了所有人的责任。",
-      },
-      {
-        key: "C",
-        text: "这是城市化代价，需要在效率和人文之间平衡",
-        diag: "温和的中间立场，但「平衡」这种话往往是回避具体分析的修辞。具体到每一个村，平衡什么和什么？谁来决定平衡点？平衡的代价由谁承担？这些问题不被追问，「平衡」就只是一个让人放松的词。",
-      },
-      {
-        key: "D",
-        text: "这个数据本身值得追问——「消失」具体指什么？是物理拆除？人口迁出？行政合并？这三种「消失」的性质完全不同",
-        diag: "开始进入分析。这是一个非常关键的区分：物理拆除的村（强拆、规划性消失）、人口迁出的村（空心化但建筑仍在）、行政合并的村（村还在但建制没了），这三种「消失」的性质完全不同——它们对村民意味着不同的命运、对记忆研究意味着不同的对象、对政策研究意味着不同的问题。把它们混为一个「消失」是分析的失败。农村社会学者贺雪峰、应星、吴飞等人的研究都强调过这种区分。",
-      },
-      {
-        key: "E",
-        text: "「村庄消失」这种叙述本身就是一个值得研究的话语——它什么时候被这样讲述？谁在讲？讲述背后是什么样的政治和情感结构？",
-        diag: "元层级的反应。这正是 Pierre Nora 的核心命题在中国语境下的应用：当一个社会开始大规模地谈论「我们在失去某种东西」时，这种谈论本身比那个「失去」更值得研究。中国「村庄消失」话语在 2010 年前后大规模兴起（冯骥才那批文化保护主义者、天津大学的「传统村落」项目、各种媒体报道），它不仅是对真实变迁的反应，也是一种有特定时机、特定主体、特定政治效果的话语生产。研究它能告诉我们关于当代中国的什么？",
-      },
-    ],
-  },
-  {
-    num: "十四",
-    title: "村庄消亡情境下，下面哪种工作最有价值？",
-    options: [
-      {
-        key: "A",
-        text: "趁老人还在，赶紧把村史写出来",
-        diag: "这是最普遍但也最浅的反应。它有价值，但它产出的是静态记录，错过了动态过程。村庄消亡最值得研究的恰恰不是「它原来什么样」，而是「它是怎么变成现在这样的」。消亡是一个过程，不是一个状态。",
-      },
-      {
-        key: "B",
-        text: "趁老房子还在，赶紧拍照建档",
-        diag: "比 A 多了视觉维度，但仍然停留在「保存遗存」层面。物质保存固然有价值，但它和理解村庄的真正历史是两件事——一栋老房子的照片告诉你它的样子，但告诉不了你它经历了什么、谁住过、为什么被拆。",
-      },
-      {
-        key: "C",
-        text: "跟踪研究这个村是怎么消亡的——谁先走、土地怎么处置、家具怎么搬、祠堂怎么处理、迁居社区里村民怎么重组关系",
-        diag: "这是当代乡村研究最有价值的方向之一。中国语境下，应星、贺雪峰、吴飞等人的研究都在不同程度上做这种过程性追踪。一个具体的撤村并居案例，它的过程本身就是一个完整的当代中国政治经济样本：土地财政如何运作、地方政府如何动员、村民如何分化、抵抗如何形成又如何瓦解。这种研究产出的知识，对未来理解我们这个时代的价值，远远超过任何精装志书。",
-      },
-      {
-        key: "D",
-        text: "研究消亡过程中的具体冲突——征地补偿是怎么谈的、谁得到多少、谁被强制、谁抵抗、抵抗的代价是什么",
-        diag: "比 C 更尖锐的版本。它直接问消亡过程中的冲突和权力——谁赢谁输、谁说了算、谁被牺牲。这种研究在当下做不容易（有政治敏感性），但它最能暴露这个时代的真实结构。",
-      },
-      {
-        key: "E",
-        text: "研究迁居后的村民——他们的新生活什么样、他们和原来的村庄是什么关系、孩子还认得故乡吗、记忆怎么变形",
-        diag: "这是被严重忽视的维度。村庄消失了，但村民没有消失——他们去了哪里？在城郊的安置小区、在打工城市的城中村、在子女家的房子里。这些迁居者是研究「消失的村庄」最珍贵的窗口，因为他们身上同时承载着旧村的记忆和新生活的现实。社会学家项飙的「浙江村」研究、关于「农民工二代」的研究、关于「返乡—再外出」的研究，都是这条线上的工作。而村志运动几乎完全忽视了这个维度——因为村志的本体是「村」，村没了它就没了对象；但人类学的本体是人，人在哪里它的对象就在哪里。",
-      },
-      {
-        key: "F",
-        text: "研究「乡愁话语」和村志运动本身——为什么是这个时刻、谁在生产这种话语、它在政治上起什么作用",
-        diag: "元层级的研究。这是知识社会学层面的工作。这道题的关键诊断：选 A、B 的人，目光锁定在「消失之前的村」——这是一个已经回不去的、被理想化的对象。选 C、D、E、F 的人，目光跟着真实的过程和真实的人移动——这才是对当下负责的研究。",
-      },
-    ],
-  },
-  {
-    num: "十五",
-    title: "城市化、现代化、村庄消亡——你怎么看这三者的关系？",
-    options: [
-      {
-        key: "A",
-        text: "城市化和现代化是好事，但代价是村庄消亡，这是必要的牺牲",
-        diag: "技术决定论 + 进步主义。它把活生生的政治经济过程包装成「必要牺牲」——这种话语等于免除了所有具体决策者的责任。每一个村庄是怎么消失的、由谁决定、谁承担代价，全都被「必要」二字覆盖过去。",
-      },
-      {
-        key: "B",
-        text: "城市化和现代化是被强加的，村庄本来可以以自己的方式延续",
-        diag: "浪漫保守主义。它假设有一个「村庄本来的样子」可以延续。但村庄从来不是孤立自足的，它一直嵌在更大的政治经济流动里——人类学家 Eric Wolf 在《欧洲与没有历史的人民》里的核心论点就是这个：所谓「传统社区」从来不是静止的本体，它一直在和外部世界交换、变形、被重塑。一个「以自己的方式延续」的村庄是一个想象。",
-      },
-      {
-        key: "C",
-        text: "三者的关系不是因果链——「村庄消亡」不是城市化的副产品，它是当代中国特定土地制度、户籍制度、地方财政体制共同作用的具体结果",
-        diag: "分析的反应。中国村庄消亡不是抽象的「城市化」造成的，是具体的制度安排造成的：土地公有但使用权可流转、地方政府靠土地财政、户籍制度限制人口自由迁移、撤村并居与土地指标挂钩、农村集体土地不能直接入市。这些制度的每一项都是可以选择、可以改变的政治决定。把它们抽象成「城市化」等于让它们隐形。",
-      },
-      {
-        key: "D",
-        text: "「村庄」和「城市」这种对立本身需要被质疑——很多「城中村」、「半工半耕」、「流动村庄」早已超出了这种二分",
-        diag: "更高级的分析。它质疑「村—城」二分本身——大量当代中国人早已生活在这个二分之外：城中村居民、流动家庭（人在城里、户口在村、孩子在县）、半工半耕家庭、跨省打工的「两栖人口」。在这种现实下，「村庄消亡」叙事其实是用一个已经失效的二分法在描述一个早已超出它的现实。",
-      },
-      {
-        key: "E",
-        text: "「村庄消亡」作为话题的兴起，本身就是城市化进入特定阶段的产物——一个社会只有在大部分人已经离开村庄之后，才会开始集体怀念村庄",
-        diag: "元层级的洞察。这一条是这套问卷里最重要的判断之一：怀念村庄是城市化的产物，不是它的对立面。在 1980 年代之前的中国，没有人会大规模地「怀念村庄」——因为绝大多数人就在村里。「乡愁」作为一种集体情感的兴起，本身是城市化让 7 亿人离开土地之后的产物。Raymond Williams 在《乡村与城市》（The Country and the City）里有一个经典论断：每一代英国人都在怀念「上一代的乡村」，而上一代其实正在怀念更上一代的乡村——「消失中的真实乡村」是一个永远后退的影子。中国今天的「村庄消亡」话语，套用这个洞察后会变得非常清楚：我们怀念的不是任何一个具体的村庄，是一个永远被想象成「刚刚还在但即将消失」的村庄。这个想象的功能，比它对应的真实更重要。",
-      },
-    ],
-  },
-];
-
-const chineseNum = (n) => {
-  const map = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-  if (n <= 10) return map[n];
-  if (n < 20) return "十" + map[n - 10];
-  return n.toString();
-};
-
-const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap');
-
-  :root {
-    --paper: #F2EDE2;
-    --paper-light: #F8F4EA;
-    --ink: #1F1A14;
-    --ink-soft: #4A4138;
-    --ink-faint: #8C8275;
-    --seal: #8E2C26;
-    --seal-soft: #B07A4A;
-    --line: #D4C9B0;
-    --line-faint: #E5DDC9;
-  }
-
-  .qfont-display {
-    font-family: 'Noto Serif SC', 'EB Garamond', serif;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-  }
-  .qfont-body {
-    font-family: 'Noto Serif SC', 'EB Garamond', serif;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-  .qfont-italic {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-weight: 400;
-  }
-  .qfont-small {
-    font-family: 'EB Garamond', serif;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  .paper-bg {
-    background-color: var(--paper);
-    background-image:
-      radial-gradient(ellipse at top left, rgba(176, 122, 74, 0.04) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom right, rgba(142, 44, 38, 0.03) 0%, transparent 50%);
-  }
-
-  .ink { color: var(--ink); }
-  .ink-soft { color: var(--ink-soft); }
-  .ink-faint { color: var(--ink-faint); }
-  .seal-color { color: var(--seal); }
-  .seal-soft-color { color: var(--seal-soft); }
-
-  .line-divider { background-color: var(--line); }
-  .line-divider-faint { background-color: var(--line-faint); }
-
-  .border-line { border-color: var(--line); }
-  .border-line-faint { border-color: var(--line-faint); }
-  .border-seal { border-color: var(--seal); }
-  .border-ink { border-color: var(--ink); }
-
-  .bg-paper-light { background-color: var(--paper-light); }
-  .bg-seal { background-color: var(--seal); }
-
-  @keyframes pageIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .page-in { animation: pageIn 600ms ease-out both; }
-
-  @keyframes optionExpand {
-    from { opacity: 0; max-height: 0; }
-    to { opacity: 1; max-height: 4000px; }
-  }
-  .option-expand { animation: optionExpand 400ms ease-out both; overflow: hidden; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up-1 { animation: fadeUp 700ms ease-out 100ms both; }
-  .fade-up-2 { animation: fadeUp 700ms ease-out 250ms both; }
-  .fade-up-3 { animation: fadeUp 700ms ease-out 400ms both; }
-  .fade-up-4 { animation: fadeUp 700ms ease-out 550ms both; }
-  .fade-up-5 { animation: fadeUp 700ms ease-out 700ms both; }
-
-  .option-card {
-    transition: background-color 200ms, border-color 200ms;
-    cursor: pointer;
-  }
-  .option-card:hover {
-    background-color: var(--paper-light);
-    border-color: var(--ink-faint);
-  }
-  .option-card.expanded {
-    background-color: var(--paper-light);
-    border-color: var(--ink-soft);
-  }
-
-  .option-letter {
-    font-family: 'EB Garamond', serif;
-    font-weight: 500;
     font-style: italic;
   }
 
   .nav-button {
-    font-family: 'Noto Serif SC', serif;
+    font-family: serif;
     font-weight: 400;
     letter-spacing: 0.1em;
     transition: color 200ms, border-color 200ms;
@@ -1175,12 +701,9 @@ const styles = `
     color: var(--ink-faint);
     cursor: not-allowed;
   }
-  .nav-button:disabled:hover {
-    color: var(--ink-faint);
-  }
 
   .start-button {
-    font-family: 'Noto Serif SC', serif;
+    font-family: serif;
     font-weight: 400;
     letter-spacing: 0.4em;
     padding: 14px 56px;
@@ -1200,7 +723,7 @@ const styles = `
     border: 1.5px solid var(--seal);
     color: var(--seal);
     padding: 6px 10px;
-    font-family: 'Noto Serif SC', serif;
+    font-family: serif;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.15em;
@@ -1228,12 +751,8 @@ function Cover({ onStart }) {
   return (
     <div className="page-in min-h-screen flex flex-col justify-between px-8 py-12 md:px-16 md:py-20">
       <div className="flex justify-between items-start">
-        <div className="qfont-small ink-faint text-xs fade-up-1">
-          A SELF-DIAGNOSIS
-        </div>
-        <div className="qfont-small ink-faint text-xs fade-up-1">
-          16 QUESTIONS
-        </div>
+        <div className="qfont-small ink-faint text-xs fade-up-1">A SELF-DIAGNOSIS</div>
+        <div className="qfont-small ink-faint text-xs fade-up-1">16 QUESTIONS</div>
       </div>
 
       <div className="flex-1 flex flex-col justify-center max-w-3xl mx-auto w-full">
@@ -1251,20 +770,14 @@ function Cover({ onStart }) {
 
         <div className="qfont-body ink-soft text-base md:text-lg leading-relaxed space-y-5 max-w-2xl">
           {COVER.intro.map((p, i) => (
-            <p key={i} className={`fade-up-${Math.min(i + 3, 5)}`}>
-              {p}
-            </p>
+            <p key={i} className={`fade-up-${Math.min(i + 3, 5)}`}>{p}</p>
           ))}
         </div>
       </div>
 
       <div className="flex flex-col items-center gap-6 mt-12 fade-up-5">
-        <button onClick={onStart} className="start-button">
-          {COVER.start}
-        </button>
-        <div className="qfont-small ink-faint text-xs">
-          TSURUYAMA &middot; MMXXVI
-        </div>
+        <button onClick={onStart} className="start-button">{COVER.start}</button>
+        <div className="qfont-small ink-faint text-xs">TSURUYAMA &middot; MMXXVI</div>
       </div>
     </div>
   );
@@ -1276,12 +789,8 @@ function QuestionPage({ q, idx, total, expanded, onToggle, onPrev, onNext }) {
   return (
     <div className="page-in min-h-screen flex flex-col px-6 py-8 md:px-16 md:py-12">
       <div className="flex justify-between items-center mb-2">
-        <div className="qfont-small ink-faint text-xs">
-          QUESTION {idx + 1} / {total}
-        </div>
-        <div className="qfont-italic ink-faint text-sm">
-          {q.num}
-        </div>
+        <div className="qfont-small ink-faint text-xs">QUESTION {idx + 1} / {total}</div>
+        <div className="qfont-italic ink-faint text-sm">{q.num}</div>
       </div>
 
       <div className="progress-track mb-12">
@@ -1290,13 +799,9 @@ function QuestionPage({ q, idx, total, expanded, onToggle, onPrev, onNext }) {
 
       <div className="max-w-3xl mx-auto w-full flex-1">
         <div className="flex items-baseline gap-4 mb-10">
-          <span className="qfont-display seal-color text-5xl md:text-6xl leading-none">
-            {q.num}
-          </span>
+          <span className="qfont-display seal-color text-5xl md:text-6xl leading-none">{q.num}</span>
           <div className="vertical-line self-stretch"></div>
-          <h2 className="qfont-display ink text-xl md:text-2xl leading-snug flex-1">
-            {q.title}
-          </h2>
+          <h2 className="qfont-display ink text-xl md:text-2xl leading-snug flex-1">{q.title}</h2>
         </div>
 
         <div className="space-y-3">
@@ -1306,17 +811,10 @@ function QuestionPage({ q, idx, total, expanded, onToggle, onPrev, onNext }) {
               <div
                 key={opt.key}
                 onClick={() => onToggle(opt.key)}
-                className={`option-card border border-line rounded-sm p-5 md:p-6 ${
-                  isExpanded ? "expanded" : ""
-                }`}
+                className={`option-card border border-line rounded-sm p-5 md:p-6 ${isExpanded ? "expanded" : ""}`}
               >
                 <div className="flex gap-4 items-start">
-                  <span
-                    className={`option-letter text-xl md:text-2xl flex-shrink-0 mt-0.5 ${
-                      isExpanded ? "seal-color" : "ink-faint"
-                    }`}
-                    style={{ minWidth: "1.5rem" }}
-                  >
+                  <span className={`option-letter text-xl md:text-2xl flex-shrink-0 mt-0.5 ${isExpanded ? "seal-color" : "ink-faint"}`} style={{ minWidth: "1.5rem" }}>
                     {opt.key}.
                   </span>
                   <span className="qfont-body ink text-base leading-relaxed flex-1" style={{ fontSize: "16.5px" }}>
@@ -1326,7 +824,7 @@ function QuestionPage({ q, idx, total, expanded, onToggle, onPrev, onNext }) {
                 {isExpanded && (
                   <div className="option-expand mt-5 pt-5 border-t border-line-faint">
                     <div className="flex gap-4">
-                      <div className="vertical-line bg-seal flex-shrink-0" style={{ background: "var(--seal)", opacity: 0.4 }}></div>
+                      <div className="vertical-line flex-shrink-0" style={{ background: "var(--seal)", opacity: 0.4 }}></div>
                       <p className="qfont-body ink-soft text-base leading-loose flex-1" style={{ fontSize: "15.5px" }}>
                         {opt.diag}
                       </p>
@@ -1340,13 +838,7 @@ function QuestionPage({ q, idx, total, expanded, onToggle, onPrev, onNext }) {
       </div>
 
       <div className="max-w-3xl mx-auto w-full mt-16 pt-8 border-t border-line-faint flex justify-between items-center">
-        <button
-          onClick={onPrev}
-          disabled={idx === 0}
-          className="nav-button text-sm md:text-base"
-        >
-          ← 上一题
-        </button>
+        <button onClick={onPrev} disabled={idx === 0} className="nav-button text-sm md:text-base">← 上一题</button>
         <div className="qfont-italic ink-faint text-xs">
           {expanded.size > 0 ? `已读 ${expanded.size} 个诊断` : "点击选项展开诊断"}
         </div>
@@ -1362,38 +854,24 @@ function Closing({ onRestart }) {
   return (
     <div className="page-in min-h-screen flex flex-col justify-between px-8 py-12 md:px-16 md:py-20">
       <div className="flex justify-between items-start">
-        <div className="qfont-small ink-faint text-xs fade-up-1">
-          END
-        </div>
-        <div className="qfont-small ink-faint text-xs fade-up-1">
-          16 / 16
-        </div>
+        <div className="qfont-small ink-faint text-xs fade-up-1">END</div>
+        <div className="qfont-small ink-faint text-xs fade-up-1">16 / 16</div>
       </div>
 
       <div className="flex-1 flex flex-col justify-center max-w-3xl mx-auto w-full">
         <div className="fade-up-2 mb-10">
           <span className="seal-stamp">尾</span>
         </div>
-
         <div className="line-divider h-px w-24 fade-up-2 mb-12"></div>
-
         <div className="qfont-display ink text-2xl md:text-3xl leading-loose space-y-10 max-w-2xl">
-          <p className="fade-up-3">
-            这套问卷的目的不是<span className="seal-color">驳倒</span>任何想为家乡留下文字的人。
-          </p>
-          <p className="fade-up-4">
-            让人知道自己<span className="seal-color">在做什么</span>，是这套问卷唯一的目标。
-          </p>
+          <p className="fade-up-3">这套问卷的目的不是<span className="seal-color">驳倒</span>任何想为家乡留下文字的人。</p>
+          <p className="fade-up-4">让人知道自己<span className="seal-color">在做什么</span>，是这套问卷唯一的目标。</p>
         </div>
       </div>
 
       <div className="flex flex-col items-center gap-6 mt-12 fade-up-5">
-        <button onClick={onRestart} className="start-button">
-          {CLOSING.restart}
-        </button>
-        <div className="qfont-small ink-faint text-xs">
-          TSURUYAMA &middot; MMXXVI
-        </div>
+        <button onClick={onRestart} className="start-button">{CLOSING.restart}</button>
+        <div className="qfont-small ink-faint text-xs">TSURUYAMA &middot; MMXXVI</div>
       </div>
     </div>
   );
@@ -1424,12 +902,8 @@ function App() {
     });
   };
 
-  const handlePrev = () => {
-    if (page > 1) setPage(page - 1);
-  };
-  const handleNext = () => {
-    if (page <= total) setPage(page + 1);
-  };
+  const handlePrev = () => { if (page > 1) setPage(page - 1); };
+  const handleNext = () => { if (page <= total) setPage(page + 1); };
 
   const renderContent = () => {
     if (page === 0) return <Cover onStart={handleStart} />;
